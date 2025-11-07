@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://9ames7uan.github.io/sitemap.xml
