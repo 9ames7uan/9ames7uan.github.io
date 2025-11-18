@@ -1,35 +1,35 @@
 {
   "basics": {
     "name": "James Tuan",
-    "label": "Scientist",
+    "label": "Cardano Developer",
     "image": "",
     "email": "9ames.7uan@gmail.com",
     "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
+    "url": "https://github.com/9ames7uan",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "No. 101, Sec. 2, Guangfu Rd., East Dist., Hsinchu City",
+      "postalCode": "300044",
+      "city": "Hsinchu City",
+      "countryCode": "Taiwan (R.O.C.)",
+      "region": ""
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "X",
+        "username": "James Tuan",
+        "url": "https://x.com/9ames_7uan"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Department of Power Mechanical Engineeringj, National Tsing Hua University",
+      "position": "Senior Student",
+      "url": "https://pme.site.nthu.edu.tw/",
+      "startDate": "2022-08-01",
+      "endDate": "2026-07-31",
+      "summary": "",
       "highlights": ["Relativity"]
     }
   ],
@@ -151,13 +151,28 @@
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "Chinese",
+      "fluency": "Native Speaker",
+      "icon": ""
+    },
+    {
+      "language": "Mandarin Chinese",
+      "fluency": "Native Speaker",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Conversant",
+      "icon": ""
+    },
+    {
+      "language": "Japanese",
+      "fluency": "Studied",
+      "icon": ""
+    },
+    {
+      "language": "German",
+      "fluency": "Studied",
       "icon": ""
     }
   ],
