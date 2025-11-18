@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 母體至胎盤晶片陣列的流體驅動與快接界面開發
+title: project 4
 description: 結合仿生胎盤模型與自動化流體控制，模擬母體至胎兒的血流傳輸機制
 img: assets/img/projects/placenta/thumbnail.jpg
 importance: 1
-category: fun
+category: Fun
 related_publications: false
 ---
 
