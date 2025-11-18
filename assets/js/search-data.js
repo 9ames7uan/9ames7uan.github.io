@@ -99,42 +99,42 @@ ninja.data = [{
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
+              window.location.href = "/projects/1-project";
             },},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
+              window.location.href = "/projects/2-project";
             },},{id: "projects-project-3-with-very-long-name",
           title: 'project 3 with very long name',
           description: "a project that redirects to another website",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-母體至胎盤晶片陣列的流體驅動與快接界面開發",
-          title: '母體至胎盤晶片陣列的流體驅動與快接界面開發',
+              window.location.href = "/projects/3-project";
+            },},{id: "projects-project-4",
+          title: 'project 4',
           description: "結合仿生胎盤模型與自動化流體控制，模擬母體至胎兒的血流傳輸機制",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
+              window.location.href = "/projects/4-project";
             },},{id: "projects-project-5",
           title: 'project 5',
           description: "a project with a background image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
+              window.location.href = "/projects/5-project";
             },},{id: "projects-project-6",
           title: 'project 6',
           description: "a project with no image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
+              window.location.href = "/projects/6-project";
             },},{id: "projects-project-7",
           title: 'project 7',
           description: "with background image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
+              window.location.href = "/projects/7-project";
             },},{id: "projects-project-8",
           title: 'project 8',
           description: "an other project with a background image and giscus comments",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
+              window.location.href = "/projects/8-project";
             },},{
         id: 'social-email',
         title: 'email',
