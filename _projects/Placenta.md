@@ -2,7 +2,7 @@
 layout: page
 title: 母體至胎盤晶片陣列的流體驅動與快接界面開發
 description: 團隊成員：賴彥錞、段鈞騰、江鎰丞、黃茂緯   指導教授：洪健中教授
-img: assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/thumbnail.jpg
+img: assets/img/projects/Placenta/thumbnail.jpg
 importance: 1
 category: Work
 related_publications: false
@@ -31,7 +31,7 @@ related_publications: false
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/System Structure.jpg" title="實驗方法架構圖" class="img-fluid rounded z-depth-1" caption="圖一：實驗方法架構圖" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/System Structure.jpg" title="實驗方法架構圖" class="img-fluid rounded z-depth-1" caption="圖一：實驗方法架構圖" %}
     </div>
 </div>
 
@@ -44,7 +44,7 @@ related_publications: false
         <strong>參數定義與模型規劃</strong>：搜尋胎盤生理參數（如直徑、厚度、總體積）及螺旋動脈之大小、數量與分佈，以此數據為基礎建立流體區域並決定模型設計方向。
         <div class="row justify-content-sm-center mt-3">
             <div class="col-sm-10">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Actual Placenta Cross-sectional.jpg" title="胎盤截面圖" class="img-fluid rounded z-depth-1" caption="圖二：胎盤截面圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/Actual Placenta Cross-sectional.jpg" title="胎盤截面圖" class="img-fluid rounded z-depth-1" caption="圖二：胎盤截面圖" %}
             </div>
         </div>
     </li>
@@ -68,13 +68,13 @@ related_publications: false
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Placenta Model_1.jpg" title="胎盤模型圖" class="img-fluid rounded z-depth-1" caption="圖三：胎盤模型圖" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/Placenta Model_1.jpg" title="胎盤模型圖" class="img-fluid rounded z-depth-1" caption="圖三：胎盤模型圖" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Placenta Model_2.jpg" title="胎盤1/4簡化模型圖" class="img-fluid rounded z-depth-1" caption="圖四：胎盤1/4簡化模型圖（雙晶片）" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/Placenta Model_2.jpg" title="胎盤1/4簡化模型圖" class="img-fluid rounded z-depth-1" caption="圖四：胎盤1/4簡化模型圖（雙晶片）" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Placenta Model_3.jpg" title="胎盤最簡化模型圖" class="img-fluid rounded z-depth-1" caption="圖五：胎盤最簡化模型圖（單晶片）" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/Placenta Model_3.jpg" title="胎盤最簡化模型圖" class="img-fluid rounded z-depth-1" caption="圖五：胎盤最簡化模型圖（單晶片）" %}
     </div>
 </div>
 <div class="caption">
@@ -93,7 +93,7 @@ related_publications: false
         </ul>
         <div class="row justify-content-sm-center mt-3">
             <div class="col-sm-10">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Pump System Structure.jpg" title="水泵系統架構圖" class="img-fluid rounded z-depth-1" caption="圖六：水泵流體系統架構圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/Pump System Structure.jpg" title="水泵系統架構圖" class="img-fluid rounded z-depth-1" caption="圖六：水泵流體系統架構圖" %}
             </div>
         </div>
     </li>
@@ -107,18 +107,18 @@ related_publications: false
         
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/7.jpg" title="不同電壓下，出口流量對水閥開度圖" class="img-fluid rounded z-depth-1" caption="圖七：不同電壓下，出口流量對水閥開度圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/7.jpg" title="不同電壓下，出口流量對水閥開度圖" class="img-fluid rounded z-depth-1" caption="圖七：不同電壓下，出口流量對水閥開度圖" %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/8.jpg" title="不同電壓下，出口壓力對水閥開度圖" class="img-fluid rounded z-depth-1" caption="圖八：不同電壓下，出口壓力對水閥開度圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/8.jpg" title="不同電壓下，出口壓力對水閥開度圖" class="img-fluid rounded z-depth-1" caption="圖八：不同電壓下，出口壓力對水閥開度圖" %}
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/9.jpg" title="不同水閥開度下，出口流量對電壓圖" class="img-fluid rounded z-depth-1" caption="圖九：不同水閥開度下，出口流量對電壓圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/9.jpg" title="不同水閥開度下，出口流量對電壓圖" class="img-fluid rounded z-depth-1" caption="圖九：不同水閥開度下，出口流量對電壓圖" %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/10.jpg" title="不同水閥開度下，出口壓力對電壓圖" class="img-fluid rounded z-depth-1" caption="圖十：不同水閥開度下，出口壓力對電壓圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/10.jpg" title="不同水閥開度下，出口壓力對電壓圖" class="img-fluid rounded z-depth-1" caption="圖十：不同水閥開度下，出口壓力對電壓圖" %}
             </div>
         </div>
         
@@ -134,10 +134,10 @@ related_publications: false
 
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/11.jpg" title="水泵出口壓力對流量圖、轉換方程式" class="img-fluid rounded z-depth-1" caption="圖十一：水泵出口壓力對流量圖、轉換方程式" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/11.jpg" title="水泵出口壓力對流量圖、轉換方程式" class="img-fluid rounded z-depth-1" caption="圖十一：水泵出口壓力對流量圖、轉換方程式" %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/12.jpg" title="輸入 PWM 對流量圖、轉換方程式" class="img-fluid rounded z-depth-1" caption="圖十二：輸入 PWM 對流量圖、轉換方程式" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/12.jpg" title="輸入 PWM 對流量圖、轉換方程式" class="img-fluid rounded z-depth-1" caption="圖十二：輸入 PWM 對流量圖、轉換方程式" %}
             </div>
         </div>
         <p class="mt-2">將上述數據擬合成數學方程式，作為控制系統在線性範圍內的近似模型。</p>
@@ -157,10 +157,10 @@ related_publications: false
 
         <div class="row mt-3">
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/13.jpg" title="文獻流速波形圖" class="img-fluid rounded z-depth-1" caption="圖十三：文獻流速波形圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/13.jpg" title="文獻流速波形圖" class="img-fluid rounded z-depth-1" caption="圖十三：文獻流速波形圖" %}
             </div>
             <div class="col-sm mt-3 mt-md-0">
-                {% include figure.liquid loading="eager" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/14.jpg" title="擬合方程式重疊比較圖" class="img-fluid rounded z-depth-1" caption="圖十四：擬合方程式重疊比較圖" %}
+                {% include figure.liquid loading="eager" path="assets/img/projects/Placenta/14.jpg" title="擬合方程式重疊比較圖" class="img-fluid rounded z-depth-1" caption="圖十四：擬合方程式重疊比較圖" %}
             </div>
         </div>
     </li>
@@ -172,7 +172,7 @@ related_publications: false
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Circuit Structure.jpg" title="電路架構圖" class="img-fluid rounded z-depth-1" caption="圖十五：電路架構圖" %}
+        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/Circuit Structure.jpg" title="電路架構圖" class="img-fluid rounded z-depth-1" caption="圖十五：電路架構圖" %}
     </div>
 </div>
 
@@ -314,7 +314,7 @@ related_publications: false
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/Control Structure.jpg" title="控制系統架構圖" class="img-fluid rounded z-depth-1" caption="圖十六：控制系統架構圖" %}
+        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/Control Structure.jpg" title="控制系統架構圖" class="img-fluid rounded z-depth-1" caption="圖十六：控制系統架構圖" %}
     </div>
 </div>
 
@@ -351,13 +351,13 @@ related_publications: false
 
 <div class="row">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/20.jpg" title="濾波前追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、濾波前追蹤狀況重疊圖" %}
+        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/20.jpg" title="濾波前追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、濾波前追蹤狀況重疊圖" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/21.jpg" title="無回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、無回授控制系統追蹤狀況重疊圖" %}
+        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/21.jpg" title="無回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、無回授控制系統追蹤狀況重疊圖" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Fluid Drive and Quick-Connect Interface Development for Maternal-to-Placenta Chip Arrays/22.jpg" title="回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、回授控制系統追蹤狀況重疊圖" %}
+        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/22.jpg" title="回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、回授控制系統追蹤狀況重疊圖" %}
     </div>
 </div>
 
