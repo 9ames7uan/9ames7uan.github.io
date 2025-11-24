@@ -37,14 +37,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+        },{id: "nav-more",
+          title: "More",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/_pages/dropdown/";
+          },
+        },{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "projects-project-1",
@@ -72,20 +72,6 @@ ninja.data = [{
           window.open("https://github.com/9ames7uan", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
-        id: 'social-instagram',
-        title: 'Instagram',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://instagram.com/9ames7uan", "_blank");
-        },
-      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
@@ -93,11 +79,11 @@ ninja.data = [{
           window.open("/feed.xml", "_blank");
         },
       },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
+        id: 'social-x',
+        title: 'X',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+          window.open("https://twitter.com/9ames_7uan", "_blank");
         },
       },{
         id: 'social-threads_id',
@@ -105,13 +91,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
         },
       },{
       id: 'light-theme',
