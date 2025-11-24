@@ -3,8 +3,8 @@
 # the socials will be displayed in the order they are defined here
 
 # academia_edu:  your organization and your username Ex. https://organization.academia.edu/UserName
-#  organization: princeton # your organization as appears in the subdomain
-#  username:  AlbertEinstein # your username
+# organization: princeton # your organization as appears in the subdomain
+# username:  # your username
 # acm_id: # your dl.acm.org/profile/id
 # blogger_url: # your blogger URL
 # bluesky_url: # your bluesky URL
@@ -17,8 +17,8 @@ github_username: 9ames7uan # your GitHub user name
 # gitlab_username: # your GitLab user name
 # hal_id: # your HAL id (https://hal.science/)
 # ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id: 1010907 # Inspire HEP author ID
-instagram_id: 9ames7uan # your instagram id
+# inspirehep_id: 1010907 # Inspire HEP author ID
+# instagram_id: 9ames7uan # your instagram id
 # kaggle_id: # your kaggle id
 # keybase_username: # your keybase user name
 # lastfm_id: # your lastfm id
@@ -34,7 +34,7 @@ instagram_id: 9ames7uan # your instagram id
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
 rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
+# scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
@@ -47,11 +47,11 @@ scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
 # work_url: # work page URL
-# x_username: # your X handle
+x_username: 9ames_7uan # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 threads_id: 9ames7uan
-custom_social: # can be any name here other than the ones already defined above
-  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+# custom_social: # can be any name here other than the ones already defined above
+  # logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
+  # title: Custom Social
+  # url: https://www.alberteinstein.com/
