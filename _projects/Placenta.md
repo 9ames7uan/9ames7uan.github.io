@@ -1,18 +1,21 @@
 ---
 layout: page
 title: 母體至胎盤晶片陣列的流體驅動與快接界面開發
-description: 團隊成員：賴彥錞、段鈞騰、江鎰丞、黃茂緯   指導教授：洪健中教授
-img: assets/img/projects/Placenta/thumbnail.jpg
+description: 
+img: assets/img/projects/Placenta/Actual Placenta Cross-sectional.jpg
 importance: 1
 category: Work
 related_publications: false
 ---
 
+團隊成員：賴彥錞、段鈞騰、江鎰丞、黃茂緯
+指導教授：洪健中教授
+
 ## 研究承起
 本研究之發想，承啟實驗室模擬胎盤間腔內絨毛細胞的仿生晶片，繼而研究母體動脈與胎盤的模擬環境。
 
 ## 摘要
-本研究建立 <font color="#ec7e42">仿生胎盤模型</font> 與電路控制的 <font color="#ec7e42">水泵系統</font>。透過 3D 建模技術構建胎盤模型，經流體模擬驗證結構，整合低通濾波、複合控制策略與感測器，模擬母體動脈至胎盤的血流傳輸、脈動，同時實現對流體參數的即時監控與控制，並支援 <font color="#ec7e42">胎盤器官晶片陣列</font> 的操作。
+本研究建立 <font color="#ec7e42">仿生胎盤模型</font> 與 <font color="#ec7e42">電路控制的水泵系統</font>。透過 3D 建模技術構建胎盤模型，經流體模擬驗證結構，整合低通濾波、複合控制策略與感測器，模擬母體動脈至胎盤的血流傳輸、脈動，同時實現對流體參數的即時監控與控制，並支援 <font color="#ec7e42">胎盤器官晶片陣列</font> 的操作。
 
 ## 研究動機
 母體生理狀況與胎兒健康的關聯一直是醫學焦點；然而，現有胎盤器官晶片多屬單一客製化設計，缺乏擴充彈性，反觀腎臟、肝臟及腸道等領域已成功實現晶片陣列化 [1]。
@@ -322,63 +325,136 @@ related_publications: false
 
 ## 結果與討論
 
-1. 流體模擬結果
-模擬顯示流體可如預期在模型中流通，並成功分流至 OOC 區域，流速等級符合生理條件（毫米級）。
+<ol>
+    <li class="mb-4">
+        <strong>流體模擬結果</strong>
+        <p class="mt-2">
+            模擬顯示流體可如預期在模型中流通，並成功分流至 <font color="#ec7e42">OOC 區域</font>，流速等級符合生理條件（毫米級）。
+        </p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/placenta/17.jpg" title="原模型流速圖" class="img-fluid rounded z-depth-1" caption="圖十七、原模型流速圖" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/placenta/fig17.jpg" title="1/4模型流速圖" class="img-fluid rounded z-depth-1" caption="圖十八、1/4模型流速圖" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/placenta/fig18.jpg" title="最簡模型流速圖" class="img-fluid rounded z-depth-1" caption="圖十九、最簡模型流速圖" %}
-    </div>
-</div>
+        <div class="row">
+            <div class="col-sm mt-3 mt-md-0">
+                {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/17.jpg" title="1/4簡化（雙晶片）模型之流體模擬流速圖" class="img-fluid rounded z-depth-1" caption="圖十七、1/4簡化（雙晶片）模型之流體模擬流速圖" %}
+            </div>
+            <div class="col-sm mt-3 mt-md-0">
+                {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/18.jpg" title="最簡化（單晶片）模型之流體模擬流速圖" class="img-fluid rounded z-depth-1" caption="圖十八、最簡化（單晶片）模型之流體模擬流速圖" %}
+            </div>
+        </div>
+    </li>
 
-2. 濾波降噪成效
-使用四階濾波後，訊號峰對峰值 (Vpp) 顯著下降，有效濾除高頻雜訊。
+    <li class="mb-4">
+        <strong>濾波降噪成效</strong>
+        <p class="mt-2">
+            使用 <font color="#ec7e42">四階濾波</font> 後，訊號峰對峰值 (Vpp) 顯著下降，有效濾除高頻雜訊。
+        </p>
 
-| 濾波階段 | 雜訊主頻率 (Hz) | 峰對峰值 (mV) |
-| :--- | :---: | :---: |
-| 無濾波 | 64.516 | 616 |
-| 一階濾波 | 64.516 | 204 |
-| **四階濾波** | **234.7** | **94** |
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">濾波階段</th>
+                        <th style="text-align: center;">雜訊主頻率 (Hz)</th>
+                        <th style="text-align: center;">峰對峰值 (mV)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;">無濾波</td>
+                        <td style="text-align: center;">64.516</td>
+                        <td style="text-align: center;">616</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">一階濾波</td>
+                        <td style="text-align: center;">64.516</td>
+                        <td style="text-align: center;">204</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>四階濾波</strong></td>
+                        <td style="text-align: center;"><strong>234.7</strong></td>
+                        <td style="text-align: center;"><font color="#ec7e42"><strong>94</strong></font></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </li>
 
-3. 波形追蹤結果
-加入回授控制與增益排程後，實際量測波形與目標生理波形高度吻合。
+    <li class="mb-4">
+        <strong>波形追蹤結果</strong>
+        <p class="mt-2">
+            加入 <font color="#ec7e42">回授控制</font> 與 <font color="#ec7e42">增益排程</font> 後，實際量測波形與目標生理波形高度吻合。
+        </p>
 
-<div class="row">
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/20.jpg" title="濾波前追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、濾波前追蹤狀況重疊圖" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/21.jpg" title="無回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、無回授控制系統追蹤狀況重疊圖" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/22.jpg" title="回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、回授控制系統追蹤狀況重疊圖" %}
-    </div>
-</div>
+        <div class="row">
+            <div class="col-sm-4 mt-3 mt-md-0">
+                {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/19.jpg" title="濾波前追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖十九、濾波前追蹤狀況重疊圖" %}
+            </div>
+            <div class="col-sm-4 mt-3 mt-md-0">
+                {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/20.jpg" title="無回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十、無回授控制系統追蹤狀況重疊圖" %}
+            </div>
+            <div class="col-sm-4 mt-3 mt-md-0">
+                {% include figure.liquid loading="lazy" path="assets/img/projects/Placenta/21.jpg" title="回授控制系統追蹤狀況重疊圖" class="img-fluid rounded z-depth-1" caption="圖二十一、回授控制系統追蹤狀況重疊圖" %}
+            </div>
+        </div>
 
-**最終脈動參數比較：**
-
-| 參數 | 目標波形 | 量測波形 | 誤差 (%) |
-| :--- | :---: | :---: | :---: |
-| PS (收縮峰值速度 cm/s) | 82.31 | 81.33 | 1.19 |
-| ED (舒張末期速度 cm/s) | 48.97 | 46.92 | 4.19 |
-| M (平均流速) | 58.89 | 59.00 | 0.19 |
-| PI (脈動指數) | 0.566 | 0.583 | 3.04 |
-| RI (阻力指數) | 0.405 | 0.423 | 4.47 |
+        <p class="mt-3"><strong>最終脈動參數比較：</strong></p>
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">參數</th>
+                        <th style="text-align: center;">目標波形</th>
+                        <th style="text-align: center;">量測波形</th>
+                        <th style="text-align: center;">誤差 (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;"><strong>PS</strong> (收縮峰值速度 cm/s)</td>
+                        <td style="text-align: center;">82.31</td>
+                        <td style="text-align: center;">81.33</td>
+                        <td style="text-align: center;">1.19</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>ED</strong> (舒張末期速度 cm/s)</td>
+                        <td style="text-align: center;">48.97</td>
+                        <td style="text-align: center;">46.92</td>
+                        <td style="text-align: center;">4.19</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>M</strong> (平均流速)</td>
+                        <td style="text-align: center;">58.89</td>
+                        <td style="text-align: center;">59.00</td>
+                        <td style="text-align: center;"><font color="#ec7e42"><strong>0.19</strong></font></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>PI</strong> (脈動指數)</td>
+                        <td style="text-align: center;">0.566</td>
+                        <td style="text-align: center;">0.583</td>
+                        <td style="text-align: center;">3.04</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><strong>RI</strong> (阻力指數)</td>
+                        <td style="text-align: center;">0.405</td>
+                        <td style="text-align: center;">0.423</td>
+                        <td style="text-align: center;">4.47</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </li>
+</ol>
 
 ---
 
 ## 結論
-胎盤模型之流體模擬顯示出其結構與實際胎盤接近，而水泵模擬則與血流脈動相符，兩者皆與預期相符，後續若有經費，則會將模型印出，與水泵結合，形成一完整系統。
+
+胎盤模型之 <font color="#ec7e42">流體模擬</font> 顯示出其結構與實際胎盤接近，而 <font color="#ec7e42">水泵模擬</font> 則與血流脈動相符，兩者皆與預期相符。後續若有經費，則會將模型進行 <font color="#ec7e42">3D 列印</font>，與水泵結合，形成一完整系統。
 
 ---
 
 ## 參考文獻
+
 1. H. Azizgolshani et al. (2021) High-throughput organ-on-chip platform... *Lab on a Chip*.
 2. Sarah K Griffiths et al. (2014) Placental structure, function and drug transfer.
 3. Chernyavsky IL et al. (2010) A mathematical model of intervillous blood flow.
