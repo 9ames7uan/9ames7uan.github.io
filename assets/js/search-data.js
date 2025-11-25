@@ -47,7 +47,7 @@ ninja.data = [{
               window.location.href = "/projects/1-project";
             },},{id: "projects-母體至胎盤晶片陣列的流體驅動與快接界面開發",
           title: '母體至胎盤晶片陣列的流體驅動與快接界面開發',
-          description: "團隊成員：賴彥錞、段鈞騰、江鎰丞、黃茂緯   指導教授：洪健中教授",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/placenta";
             },},{
