@@ -20,7 +20,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: James_Tuan.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://9ames7uan.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl:  # the subpath of your site, e.g. /note/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -84,19 +84,19 @@ google_site_verification: # your google-site-verification ID (Google Search Cons
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
-# Blog
+# Note
 # -----------------------------------------------------------------------------
 
-blog_name: 9ames_7uan's Blog # blog_name will be displayed in your blog page
-blog_description: Some thoughts
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
+note_name: 9ames_7uan's Note # note_name will be displayed in your note page
+note_description: Some thoughts
+permalink: /note/:year/:title/
+lsi: true # produce an index for related posts
 
 # Pagination
 pagination:
   enabled: true
 
-related_blog_posts:
+related_note_posts:
   enabled: true
   max_related: 5
 
@@ -121,14 +121,14 @@ disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
-# If you have blog posts published on medium.com or other external sources,
-# you can display them in your blog by adding a link to the RSS feed.
+# If you have note posts published on medium.com or other external sources,
+# you can display them in your note by adding a link to the RSS feed.
 #external_sources:
 #  - name: medium.com
 #    rss_url: https://medium.com/@al-folio/feed
-#  - name: Google Blog
+#  - name: Google note
 #    posts:
-#     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+#     - url: https://note.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
 #        published_date: 2024-05-14
 
 # -----------------------------------------------------------------------------
@@ -190,10 +190,9 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - _posts/
+# - _posts/
 # - _projects/
-  - _news/announcement_1.md
-  - _news/announcement_2.md
+  - _news
 keep_files:
   - CNAME
   - .nojekyll
@@ -252,14 +251,14 @@ jekyll-archives:
   posts:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
+      year: "/note/:year/"
+      tags: "/note/:type/:name/"
+      categories: "/note/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["Cybersecurity", "Web3", "CS", "Blockchain"] # these tags will be displayed on the front page of your blog
-display_categories: ["Projects", "Review", "Note"] # these categories will be displayed on the front page of your blog
+display_tags: ["Cybersecurity", "Web3", "CS", "Blockchain"] # these tags will be displayed on the front page of your note
+display_categories: ["Projects", "Review", "Note"] # these categories will be displayed on the front page of your note
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -310,7 +309,7 @@ filtered_bibtex_keywords:
     award,
     award_name,
     bibtex_show,
-    blog,
+    note,
     code,
     google_scholar_id,
     html,
