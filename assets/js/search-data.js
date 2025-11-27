@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "Blog",
+  },{id: "nav-note",
+          title: "Note",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/note/index.html";
           },
         },{id: "nav-projects",
           title: "Projects",
@@ -37,10 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "projects-project-1",
+        },{id: "post-macos-開發環境重構-macports-遷移指南",
+        
+          title: "macOS 開發環境重構：MacPorts 遷移指南",
+        
+        description: "這份指南記錄了我從 Homebrew All-in-One 轉換至 Hybrid Setup（Homebrew Cask for Apps + MacPorts for CLI）的流程",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/note/2015/post1/";
+          
+        },
+      },{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {

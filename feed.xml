@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://9ames7uan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://9ames7uan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-11-27T14:04:49+00:00</updated><id>https://9ames7uan.github.io/feed.xml</id><title type="html">9ames_7uan</title><subtitle>James Tuan&apos;s Website </subtitle></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://9ames7uan.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://9ames7uan.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-11-27T16:22:36+00:00</updated><id>https://9ames7uan.github.io/feed.xml</id><title type="html">9ames_7uan</title><subtitle>James Tuan&apos;s Website </subtitle><entry><title type="html">macOS 開發環境重構：MacPorts 遷移指南</title><link href="https://9ames7uan.github.io/note/2015/post1/" rel="alternate" type="text/html" title="macOS 開發環境重構：MacPorts 遷移指南"/><published>2015-07-15T15:09:00+00:00</published><updated>2015-07-15T15:09:00+00:00</updated><id>https://9ames7uan.github.io/note/2015/post1</id><content type="html" xml:base="https://9ames7uan.github.io/note/2015/post1/"><![CDATA[<p>這份指南記錄了從 Homebrew All-in-One 轉換至 <font color="#ec7e42">Hybrid Setup</font> (Homebrew Cask for Apps + MacPorts for CLI) 的完整流程。此配置是圖確保開發環境（如 C/C++, Python）與系統應用程式嚴格隔離，避免依賴衝突。</p> <h2 id="1-核心概念與架構">1. 核心概念與架構</h2> <ul> <li>GUI 應用程式 （Chrome, VS Code, Slack）：使用 <font color="#ec7e42">Homebrew Cask</font> 管理 (方便、可自動更新)。</li> <li>CLI 開發工具 （Git, GCC, Python, Node）：使用 <font color="#ec7e42">MacPorts</font> 管理 (嚴謹、隔離性高、權限明確)。</li> <li>路徑優先級：<font color="#ec7e42">MacPorts (/opt/local) &gt; Homebrew (/opt/homebrew) &gt; System (/usr/bin)</font>。</li> </ul> <h2 id="2-第一階段清理-homebrew-formulae">2. 第一階段：清理 Homebrew Formulae</h2> <p>保留 Cask，移除所有可能干擾 MacPorts 的 CLI 工具。</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 備份清單 (選用)</span>
+brew list <span class="nt">--cask</span> <span class="o">&gt;</span> ~/Desktop/brew_casks.txt
+brew list <span class="nt">--formula</span> <span class="o">&gt;</span> ~/Desktop/brew_formulae.txt
+
+<span class="c"># 2. 強制移除所有 Formulae (Libraries/CLI)</span>
+brew list <span class="nt">--formula</span> | xargs brew uninstall <span class="nt">--force</span> <span class="nt">--ignore-dependencies</span>
+
+<span class="c"># 3. 清理殘留檔案</span>
+brew cleanup <span class="nt">--prune</span><span class="o">=</span>all
+</code></pre></div></div> <h2 id="3-第二階段安裝與設定-macports">3. 第二階段：安裝與設定 MacPorts</h2> <h3 id="31-安裝">3.1 安裝</h3> <ol> <li> <p>從 MacPorts 官網下載對應 macOS 版本的 .pkg 並安裝。</p> </li> <li> <p>執行自我更新：</p> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo port -v selfupdate
+</code></pre></div> </div> </li> </ol> <h3 id="32-設定-path-關鍵">3.2 設定 PATH (關鍵)</h3> <p>編輯 ~/.zshrc，將 MacPorts 路徑置頂，確保優先權正確。</p> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ==============================================
+# HYBRID SETUP: MacPorts &gt; Homebrew &gt; System
+# ==============================================
+
+# 1. MacPorts (High Priority)
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# 2. Homebrew Cask Only (Lower Priority)
+if [[ -d "/opt/homebrew/bin" ]]; then
+  export PATH="$PATH:/opt/homebrew/bin"
+fi
+</code></pre></div></div> <p>設定完成後務必執行 <font color="#ec7e42">source ~/.zshrc</font> 並用 <font color="#ec7e42">which git</font> 檢查是否為 <font color="#ec7e42">/opt/local/bin/git</font>。</p> <h2 id="4-第三階段安裝核心開發工具">4. 第三階段：安裝核心開發工具</h2> <h3 id="41-基礎工具與編譯器">4.1 基礎工具與編譯器</h3> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Git 與基礎 Shell 工具
+sudo port install git trash gsed xz zstd
+
+# 建置系統 (C/C++ 必備)
+sudo port install cmake ninja autoconf automake libtool pkgconfig
+</code></pre></div></div> <h2 id="42-cc-llvmclang">4.2 C/C++ (LLVM/Clang)</h2> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 安裝 Clang 17
+sudo port install clang-17
+
+# 設定為系統預設 clang 指令
+sudo port select --set clang mp-clang-17
+</code></pre></div></div> <h3 id="43-python-環境">4.3 Python 環境</h3> <p>原則：<font color="#ec7e42">Global 只裝 Python 本體，套件一律用 venv 安裝。</font></p> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 安裝 Python 3.13 與 pip
+sudo port install python313 py313-pip
+
+# 設定預設版本
+sudo port select --set python3 python313
+sudo port select --set pip pip313
+</code></pre></div></div> <h3 id="44-java-openjdk">4.4 Java (OpenJDK)</h3> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo port install openjdk21
+</code></pre></div></div> <p>若系統抓不到 Java，需在 ~/.zshrc 加入 JAVA_HOME：</p> <p>Bash</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [[ -d "/opt/local/lib/openjdk21" ]]; then
+    export JAVA_HOME="/opt/local/lib/openjdk21"
+    export PATH="$JAVA_HOME/bin:$PATH"
+fi
+</code></pre></div></div> <h2 id="5-第四階段修復-vs-code-開發環境">5. 第四階段：修復 VS Code 開發環境</h2> <p>因路徑變更，需手動修正 VS Code 的 C/C++ 設定。</p> <h3 id="51-intellisense-c_cpp_propertiesjson">5.1 IntelliSense (c_cpp_properties.json)</h3> <ul> <li> <p>Compiler path: 修改為 <font color="#ec7e42">/opt/local/bin/clang++</font></p> </li> <li> <p>IntelliSense mode: 設定為 <font color="#ec7e42">macos-clang-x64</font> (Intel) 或 macos-clang-arm64 (Apple Silicon)。</p> </li> </ul> <h3 id="52-code-runner-settingsjson">5.2 Code Runner (settings.json)</h3> <p>若使用 Code Runner 執行程式，需修改 executorMap 以移除舊的 Homebrew 路徑參數。</p> <p>JSON</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"code-runner.executorMap": {
+    "c": "cd $dir &amp;&amp; /opt/local/bin/clang $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt",
+    "cpp": "cd $dir &amp;&amp; /opt/local/bin/clang++ -std=c++23 -fexperimental-library $fileName -o $fileNameWithoutExt &amp;&amp; $dir$fileNameWithoutExt"
+}
+</code></pre></div></div> <h2 id="6-常見問題與解決">6. 常見問題與解決</h2> <table> <thead> <tr> <th><strong>問題現象</strong></th> <th><strong>原因</strong></th> <th><strong>解決方案</strong></th> </tr> </thead> <tbody> <tr> <td>dyld: Library not loaded</td> <td>執行了舊的 Python (pyenv)，其依賴的 Homebrew lib 已被刪除。</td> <td>刪除舊的 venv，使用 MacPorts 的 Python 重建 (<font color="#ec7e42">python3 -m venv venv</font>)。</td> </tr> <tr> <td>zsh: command not found: pyenv</td> <td>pyenv 已隨 Homebrew 移除，但相關設定殘留。</td> <td>刪除 ~/.pyenv 資料夾，並移除 ~/.zshrc 中的 pyenv 設定。</td> </tr> <tr> <td>port command not found</td> <td>PATH 設定未生效。</td> <td>檢查 ~/.zshrc 語法並執行 source ~/.zshrc。</td> </tr> <tr> <td>ld: warning: directory not found</td> <td>編譯指令中殘留舊的 -L/usr/local/… 參數。</td> <td>檢查 VS Code 的 tasks.json 或 settings.json 並清除舊路徑。</td> </tr> </tbody> </table> <h2 id="7-未來維護指令">7. 未來維護指令</h2> <ul> <li> <p>更新軟體庫與核心: <font color="#ec7e42">sudo port -v selfupdate</font></p> </li> <li> <p>升級過期軟體: <font color="#ec7e42">sudo port upgrade outdated</font></p> </li> <li> <p>尋找軟體: <font color="#ec7e42">port search <name>&lt;/font&gt;</name></font></p> </li> <li> <p>清理舊版本: <font color="#ec7e42">sudo port uninstall inactive</font></p> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[這份指南記錄了我從 Homebrew All-in-One 轉換至 Hybrid Setup（Homebrew Cask for Apps + MacPorts for CLI）的流程]]></summary></entry></feed>
