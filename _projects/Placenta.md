@@ -8,8 +8,8 @@ category: Work
 related_publications: false
 ---
 
-團隊成員：賴彥錞、段鈞騰、江鎰丞、黃茂緯
-指導教授：洪健中教授
+團隊成員：Ian Lai、9ames 7uan、Yi Cheng、Matt Huang
+指導教授：Prof. Chien-Chong Hon
 
 ## 研究承起
 本研究之發想，承啟實驗室模擬胎盤間腔內絨毛細胞的仿生晶片，繼而研究母體動脈與胎盤的模擬環境。
