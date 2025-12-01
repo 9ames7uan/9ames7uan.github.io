@@ -638,7 +638,7 @@ jsonresume:
   - projects
 # - volunteer
 # - awards
-# - certificates
+  - certificates
 # - skills
   - languages
 # - interests
